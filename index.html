@@ -1,70 +1,34 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday Daddy! 💖</title>
-    <style>
-        body { background: #0b0f19; color: #f0f6fc; font-family: sans-serif; text-align: center; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        #lockScreen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0b0f19; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; }
-        .lock-box { background: rgba(22, 27, 34, 0.9); padding: 40px; border-radius: 20px; border: 1px solid #ff7597; }
-        .pin-input { padding: 10px; font-size: 20px; text-align: center; width: 150px; }
-        #mainContent { display: none; max-width: 450px; width: 100%; }
-        video { width: 100%; border-radius: 15px; border: 2px solid #ff7597; }
-        .btn { background: #ff7597; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body { background: #0b0f19; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
+    video { width: 100%; max-width: 400px; border: 2px solid #ff7597; border-radius: 15px; }
+    .btn { background: #ff7597; padding: 10px 20px; border: none; border-radius: 5px; color: white; cursor: pointer; }
+</style>
 </head>
 <body>
 
-    <div id="lockScreen">
-        <div class="lock-box">
-            <h2>🔒 PIN Enter Karo Bubu</h2>
-            <input type="password" id="pinInput" class="pin-input" maxlength="4" placeholder="••••">
-            <br><button class="btn" onclick="checkPin()">Unlock ❤️</button>
-        </div>
-    </div>
-
-    <div id="mainContent">
-        <!-- Naye naam yahan hain -->
-        <video id="bdayVideo" controls>
-            <source src="dharmesh_pehla.mp4" type="video/mp4">
-        </video>
-        <button class="btn" id="nextBtn" onclick="switchVideo()">Play Next Video 🎬</button>
-        
-        <h1>Happy Birthday, Daddy! ❤️</h1>
-        <p style="text-align: left; line-height: 1.6;">
-            Happy Birthday, my favourite human, my Bubu! ❤️<br><br>
-            Sach bolun toh, mujhe samajh nahi aa raha ki shuru kahan se karun... bas itna pata hai ki aap mere liye meri poori duniya ho. Aaj aapka birthday hai, mere bache ka birthday hai aur mere Daddy ka birthday hai! 🎂✨<br><br>
-            Mujhe aaj bhi wo 20 Feb ka din yaad hai... jab main GC mein dusre ladkon se baat karti thi, flirt karti thi, aur aap jealous hokar raat-raat bhar ghumne chale jaate the. Aur wo id ka password wala kissa—main kitni bhondu hoon na ki password nahi badla, aur aapne galti se wahi daal diya! 🤭 Tab se lekar aaj tak, maine dheere-dheere aapke liye khud ko badla aur aapke dil mein jagah banayi.<br><br>
-            Mujhe pata hai aapne mere liye kitne ladkon se ladayi ki hai, apni jaan khatre mein daali hai... uske liye thank you so much. Ye distance bohot jaldi khatam hoga, aur main wada karti hoon ki hum hamesha saath rahenge. I love you endlessly! 🥳💞
-        </p>
-
-        <div style="background: #1f2430; padding: 15px; border-radius: 10px; margin-top: 20px;">
-            <audio controls><source src="voice_khas.mp3" type="audio/mpeg"></audio>
-        </div>
-    </div>
+    <video id="vid" controls>
+        <source src="v1.mp4" type="video/mp4">
+    </video>
+    <br><br>
+    <button class="btn" onclick="swap()">Next Video 🎬</button>
+    <br><br>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
-        function checkPin() {
-            if (document.getElementById('pinInput').value === '2002') {
-                document.getElementById('lockScreen').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-            } else { alert("Galat PIN hai!"); }
-        }
-
-        let currentVideo = 1;
-        function switchVideo() {
-            const vid = document.getElementById('bdayVideo');
-            const btn = document.getElementById('nextBtn');
-            if (currentVideo === 1) {
-                vid.src = "dharmesh_dusra.mp4";
-                btn.innerText = "Pehle wala dekho 🔄";
-                currentVideo = 2;
-            } else {
-                vid.src = "dharmesh_pehla.mp4";
-                btn.innerText = "Play Next Video 🎬";
-                currentVideo = 1;
-            }
-            vid.play();
+        let toggle = false;
+        function swap() {
+            let v = document.getElementById('vid');
+            v.src = toggle ? "v1.mp4" : "v2.mp4";
+            v.play();
+            toggle = !toggle;
         }
     </script>
 </body>
