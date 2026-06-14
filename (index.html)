@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Bubu</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; background: #fff0f5; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 400px; margin: auto; }
+        input { padding: 12px; width: 80%; margin: 10px 0; border: 2px solid #ff69b4; border-radius: 10px; }
+        button { padding: 12px 25px; background: #ff69b4; color: white; border: none; border-radius: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="lock" class="card">
+        <h3>PIN enter karo Bubu 🌚</h3>
+        <input type="password" id="pin" placeholder="Enter PIN">
+        <br><button onclick="checkPin()">Unlock Surprise</button>
+    </div>
+
+    <div id="gift" class="card" style="display:none;">
+        <h1 style="color: #ff69b4;">Happy Birthday Bubu! 🤭</h1>
+        
+        <video width="100%" controls>
+            <source src="v1.mp4" type="video/mp4">
+        </video>
+        
+        <p>Meri pyari si awaaz suno:</p>
+        <audio controls src="audio.mp3" style="width:100%"></audio>
+
+        <p style="text-align: left; font-size: 14px; line-height: 1.5; margin-top: 15px;">
+            "Happy Birthday Bubu 🌚 20 feb ham mile fer hamre misunderstanding hogyi tumne mere liya 6 months wait Kiya or main ek bhonduuu ladki jo gc main har ladke firth karti thi but tum ne seh liya or fer ham dono kareeb ane lage main tumse itna payar karti hoon chorne ka irada ata hi nhi ham dono bhot same hain 🤭 i loveeeeeeee youuuu so bubu thanks mujhe maf kiya happy birthday mere bubu 🤭 gulu mulu cutieee nunu wala mere daddy 🤭🌚"
+        </p>
+    </div>
+
+    <script>
+        function checkPin() {
+            if(document.getElementById('pin').value == "2002") {
+                document.getElementById('lock').style.display = 'none';
+                document.getElementById('gift').style.display = 'block';
+            } else { alert("Galat PIN hai, phir se try karo!"); }
+        }
+    </script>
+</body>
+</html>
