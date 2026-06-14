@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise For Bubu ❤️</title>
+    <style>
+        body { background: #000; color: #fff; text-align: center; font-family: sans-serif; padding: 20px; }
+        .box { max-width: 400px; margin: auto; background: #1a1a1a; padding: 25px; border-radius: 20px; border: 1px solid #333; }
+        h1 { color: #ff7597; }
+        input { padding: 12px; border-radius: 10px; border: none; width: 60%; margin-bottom: 10px; }
+        button { padding: 10px 20px; border-radius: 10px; border: none; background: #ff7597; color: white; cursor: pointer; font-weight: bold; }
+        #content { display: none; }
+        video { width: 100%; border-radius: 15px; margin: 15px 0; background: #000; }
+        .msg { font-size: 16px; line-height: 1.6; margin: 20px 0; color: #e0e0e0; text-align: left; padding: 10px; border-left: 4px solid #ff7597; }
+        audio { width: 100%; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="box" id="lock">
+        <h3>Enter PIN to see surprise 🔐</h3>
+        <input type="password" id="pin" placeholder="Enter PIN">
+        <br>
+        <button onclick="check()">Enter</button>
+    </div>
+
+    <div class="box" id="content">
+        <h1>Happy Birthday Bubu ❤️</h1>
+        <video id="vid" controls>
+            <source src="v1.mp4.mp4" type="video/mp4">
+        </video>
+        <div class="msg">
+            Ham 20 feb ko milege. Aap mere liye wait karte the, main GC mein kisi aur ladke se baat karti thi, flirt karti thi aur tum jealous hoke raat mein ghumne chale jaate the. Main ek bhondu hoon ki apni ID ka password nahi badla aur tumne galati se wahi pass daal kar login kar liya! 🤭 Phir main dheere-dheere aapke paas aa gayi. Apne mere liye kitne ladko ko maara hai, apni jaan khatre mein daal kar... Thank you so much! Aaj mere bache ka birthday hai. I love you so much aur ye distance bahut jaldi khatam hoga. Tum ho aise, bubu bolti hoon. I love you so much!
+        </div>
+        <button onclick="swap()">Next Video 🎬</button>
+        <audio controls>
+            <source src="audio.mp3.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function check() {
+            if(document.getElementById('pin').value == "2002") {
+                document.getElementById('lock').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else { alert("Galat PIN hai!"); }
+        }
+        let toggle = false;
+        function swap() {
+            let v = document.getElementById('vid');
+            v.src = toggle ? "v1.mp4.mp4" : "v2.mp4.mp4";
+            v.load();
+            v.play();
+            toggle = !toggle;
+        }
+    </script>
+</body>
+</html>
