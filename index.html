@@ -14,8 +14,16 @@
 </head>
 <body>
 
+    <!-- PIN Security Script -->
+    <script>
+        var pin = prompt("Bubu, apne birthday ka PIN enter karo (Hint: 2002)");
+        if (pin !== "2002") {
+            alert("Wrong PIN! Sorry, main nahi dikha sakti.");
+            window.location.href = "about:blank";
+        }
+    </script>
+
 <div class="box">
-    <!-- Yahan maine 20 Feb 2002 update kar diya hai -->
     <div class="date-badge">20 Feb 2002 ❤️</div>
     <h1>Happy Birthday, Bubu! 🎂</h1>
     <p>
