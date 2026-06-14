@@ -1,32 +1,44 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    body { background: #0b0f19; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
-    video { width: 100%; max-width: 400px; border: 2px solid #ff7597; border-radius: 15px; }
-    .btn { background: #ff7597; padding: 10px 20px; border: none; border-radius: 5px; color: white; cursor: pointer; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Daddy ❤️</title>
+    <style>
+        body { background: #0b0f19; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
+        .container { max-width: 400px; margin: auto; }
+        video { width: 100%; border: 2px solid #ff7597; border-radius: 15px; background: #000; }
+        .btn { background: #ff7597; padding: 12px 25px; border: none; border-radius: 8px; color: white; cursor: pointer; margin: 20px 0; font-weight: bold; font-size: 16px; }
+        .msg { font-size: 16px; line-height: 1.6; margin: 20px 0; color: #ffebf0; }
+        audio { width: 100%; margin-top: 20px; }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <video id="vid" controls preload="auto">
+            <source src="v1.mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="msg">
+            Ham 20 feb ko milege. Aap mere liye wait karte the, main GC mein kisi aur ladke se baat karti thi, flirt karti thi aur tum jealous hoke raat mein ghumne chale jaate the. Main ek bhondu hoon ki apni ID ka password nahi badla aur tumne galati se wahi pass daal kar login kar liya! 🤭 Phir main dheere-dheere aapke paas aa gayi. Apne mere liye kitne ladko ko maara hai, apni jaan khatre mein daal kar... Thank you so much! Aaj mere bache ka birthday hai, daddy. I love you so much aur ye distance bahut jaldi khatam hoga. Tum ho aise, bubu bolti hoon usko daddy. I love you so much!
+        </div>
 
-    <video id="vid" controls>
-        <source src="v1.mp4" type="video/mp4">
-    </video>
-    <br><br>
-    <button class="btn" onclick="swap()">Next Video 🎬</button>
-    <br><br>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-    </audio>
+        <button class="btn" onclick="swap()">Next Video 🎬</button>
+
+        <audio controls>
+            <source src="audio.mp3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
     <script>
         let toggle = false;
         function swap() {
             let v = document.getElementById('vid');
-            v.src = toggle ? "v1.mp4" : "v2.mp4";
+            v.src = toggle ? "v1.mp4.mp4" : "v2.mp4.mp4";
+            v.load();
             v.play();
             toggle = !toggle;
         }
