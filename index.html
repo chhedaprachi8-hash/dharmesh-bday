@@ -1,45 +1,35 @@
-<!DOCTYPE html>
+
+DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Bubu 💖</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-        body { background: #fdf0f5; font-family: 'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .box { background: white; padding: 2rem; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
-        input { border: 2px solid #ffb7c5; padding: 12px; border-radius: 15px; width: 80%; margin: 10px 0; outline: none; }
-        button { background: #ff85a2; color: white; border: none; padding: 12px 25px; border-radius: 15px; font-weight: 600; cursor: pointer; transition: 0.3s; }
-        #content { display: none; }
-        video { border-radius: 20px; margin: 15px 0; }
-        audio { width: 100%; margin: 10px 0; }
-        .para { font-size: 14px; color: #555; line-height: 1.6; text-align: left; }
+        body { background-color: #fff0f5; text-align: center; font-family: 'Arial', sans-serif; padding: 30px; }
+        .box { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
+        h1 { color: #ff4d6d; font-size: 28px; }
+        h3 { color: #ff758c; }
+        p { color: #444; font-size: 16px; line-height: 1.6; margin: 20px 0; }
+        .btn { background: #ff4d6d; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; display: block; margin: 15px auto; width: 230px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #ff758c; transform: scale(1.05); }
+        .date-badge { background: #ffe4e6; color: #ff4d6d; padding: 5px 15px; border-radius: 20px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-<div class="box" id="lock">
-    <h3>Enter the PIN to unlock 🌚</h3>
-    <input type="password" id="pin" placeholder="PIN">
-    <br><button onclick="check()">Open Surprise</button>
-</div>
-
-<div class="box" id="content">
-    <h2 style="color: #ff85a2;">Happy Birthday Bubu! 🤭</h2>
-    <video width="100%" controls><source src="YOUR_VIDEO_URL_HERE"></video>
-    <audio controls><source src="YOUR_AUDIO_URL_HERE"></audio>
-    <p class="para">
-        "Happy Birthday Bubu 🌚 20 feb ham mile fer hamre misunderstanding hogyi tumne mere liya 6 months wait Kiya or main ek bhonduuu ladki jo gc main har ladke firth karti thi but tum ne seh liya or fer ham dono kareeb ane lage main tumse itna payar karti hoon chorne ka irada ata hi nhi ham dono bhot same hain 🤭 i loveeeeeeee youuuu so bubu thanks mujhe maf kiya happy birthday mere bubu 🤭 gulu mulu cutieee nunu wala mere daddy 🤭🌚"
+<div class="box">
+    <div class="date-badge">20 Feb ❤️</div>
+    <h1>Happy Birthday, Bubu! 🎂</h1>
+    <p>
+        Mere pyaare bubu, mere bachha, mere maan! <br><br>
+        20 Feb ko hum mile the, aur dekho hum kahan se kahan aa gaye. Tumne mere liye 6 mahine wait kiya, tumhara wo sabr mere liye bahut mayne rakhta hai. Main toh ek bhondu hoon jo kabhi-kabhi faltu harkatein karti hoon, but believe me, I loveee you so much! <br><br>
+        Tumhari voice se main itni obsessed hoon ki bas sunti rahun. Apni health ka dhyan rakhna, okay? 🤭 <br><br>
+        Tum meri duniya ho, aur main hamesha tumhare saath hoon. Happy Birthday, my love!
     </p>
+
+    <!-- Apni links yahan daalein -->
+    <a href="https://drive.google.com/file/d/1Lg1LXn-WMKP_0q4eU_65ourt01jKOAW1/view?usp=drivesdk" target="_blank" class="btn">Pyaari si Video 🎥</a>
+    <a href="https://drive.google.com/file/d/17CyHp2na4SLKLxSX2GTb8uRsn0W9dtZg/view?usp=drivesdk" target="_blank" class="btn">Special Memory 🎞️</a>
+    <a href="https://drive.google.com/file/d/1WS_sFfUVTKWh_9qVBJtacxjXZrVQ8tJS/view?usp=drivesdk" target="_blank" class="btn">Meri Voice Note 💌</a>
 </div>
 
-<script>
-    function check() {
-        if(document.getElementById('pin').value == "2002") {
-            document.getElementById('lock').style.display = 'none';
-            document.getElementById('content').style.display = 'block';
-        } else { alert("Galat PIN, phir se try karo!"); }
-    }
-</script>
 </body>
 </html>
