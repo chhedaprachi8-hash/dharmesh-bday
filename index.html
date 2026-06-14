@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Daddy! 💖</title>
+    <style>
+        :root { --bg-color: #0b0f19; --accent-color: #ff7597; }
+        body { background: #0b0f19; color: #f0f6fc; font-family: sans-serif; text-align: center; padding: 20px; display: flex; justify-content: center; min-height: 100vh; }
+        .container { max-width: 450px; width: 100%; background: rgba(22, 27, 34, 0.9); padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .surprise-video { width: 100%; border-radius: 15px; border: 2px solid var(--accent-color); margin-bottom: 15px; }
+        h1 { color: var(--accent-color); font-size: 28px; }
+        .emotional-text { font-size: 16px; line-height: 1.6; color: #e6edf3; margin: 20px 0; text-align: left; white-space: pre-line; }
+        .audio-box { background: #1f2430; padding: 15px; border-radius: 15px; margin-top: 20px; }
+        audio { width: 100%; margin-top: 10px; }
+        .btn { background: var(--accent-color); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video id="bdayVideo" class="surprise-video" controls>
+            <source src="dharmesh1.mp4" type="video/mp4">
+        </video>
+        <button class="btn" onclick="switchVideo()">Play Next Video 🎬</button>
+        
+        <h1>Happy Birthday, Daddy! ❤️</h1>
+        
+        <p class="emotional-text">
+Happy Birthday, my favourite human, my Bubu! ❤️
+
+Sach bolun toh, mujhe samajh nahi aa raha ki shuru kahan se karun... bas itna pata hai ki aap mere liye meri poori duniya ho. Aaj aapka birthday hai, mere bache ka birthday hai aur mere Daddy ka birthday hai! 🎂✨
+
+Mujhe aaj bhi wo 20 Feb ka din aur usse pehle ka wo waqt yaad hai... jab main GC mein dusre ladkon se baat karti thi, flirt karti thi, aur aap jealous hokar raat-raat bhar ghumne chale jaate the. Aur wo id ka password wala kissa—main kitni bhondu hoon na ki password nahi badla, aur aapne galti se wahi daal diya aur login ho gayi! 🤭 Tab se lekar aaj tak, maine dheere-dheere aapke liye khud ko badla aur aapke dil mein jagah banayi.
+
+Mujhe pata hai aapne mere liye kitne ladkon se ladayi ki hai, apni jaan khatre mein daali hai... uske liye thank you so much. Main aapki jitni bhi tareef karun kam hai. Haan, hum ladte hain, main hurt hoti hoon, aap hurt hote ho, lekin humara pyaar hamesha sabse upar raha hai. Ye distance bohot jaldi khatam hoga, aur main wada karti hoon ki hum hamesha saath rahenge. 
+
+I love you so, so much mere Bubu! Aapki smile meri jaan hai. Hamesha aise hi muskuraate rehna. Happy Birthday, Daddy! I love you endlessly! 🥳💞
+        </p>
+
+        <div class="audio-box">
+            <p style="margin:0; font-size: 14px; color: var(--accent-color);">🎵 Mere dil ki baat (Voice Note) ❤️</p>
+            <audio controls><source src="voice.mp3" type="audio/mpeg"></audio>
+        </div>
+    </div>
+
+    <script>
+        let currentVideo = 1;
+        const videoPlayer = document.getElementById('bdayVideo');
+        function switchVideo() {
+            currentVideo = (currentVideo === 1) ? 2 : 1;
+            videoPlayer.src = "dharmesh" + currentVideo + ".mp4";
+            videoPlayer.play();
+        }
+    </script>
+</body>
+  </html>
+  
