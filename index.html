@@ -1,101 +1,160 @@
-<!DOCTYPE html>
-<html>
+    
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Dharmesh ❤️</title>
-<style>
-    body {
-        background: linear-gradient(135deg, #ffe4e1, #ffb6c1, #ffc0cb);
-        text-align: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 30px 15px;
-        color: #d11a2a;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .card {
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
-        padding: 35px 25px;
-        border-radius: 25px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        max-width: 480px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-    h1 {
-        font-size: 2.3rem;
-        margin-bottom: 5px;
-        animation: pulse 2s infinite;
-    }
-    .bubu-text {
-        font-size: 1.1rem;
-        color: #b3243a;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .heart {
-        font-size: 3.5rem;
-        animation: beat 1s infinite alternate;
-        margin: 10px 0;
-    }
-    p {
-        font-size: 1.15rem;
-        color: #333333;
-        line-height: 1.7;
-        margin: 15px 0;
-        text-align: justify;
-    }
-    .story-box {
-        background: rgba(255, 182, 193, 0.3);
-        padding: 15px;
-        border-radius: 15px;
-        font-style: italic;
-        margin: 20px 0;
-        border-left: 5px solid #ff69b4;
-    }
-    .romantic-note {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #d11a2a;
-        margin-top: 25px;
-        border-top: 1px dashed #ffb6c1;
-        padding-top: 15px;
-    }
-    @keyframes beat {
-        to { transform: scale(1.15); }
-    }
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.02); }
-        100% { transform: scale(1); }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special... 💖</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 27, 34, 0.8);
+            --accent-color: #ff7597;
+            --text-color: #f0f6fc;
+        }
+        body {
+            background: linear-gradient(135deg, #0b0f19 0%, #1b1429 100%);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.5s ease;
+        }
+        .lock-screen h2 { color: var(--accent-color); font-size: 26px; margin-bottom: 10px; }
+        .pin-input {
+            width: 60%;
+            padding: 12px;
+            font-size: 22px;
+            letter-spacing: 8px;
+            text-align: center;
+            border: 2px solid #30363d;
+            background: #0d1117;
+            color: #fff;
+            border-radius: 12px;
+            margin: 20px 0;
+            outline: none;
+            transition: 0.3s;
+        }
+        .pin-input:focus { border-color: var(--accent-color); box-shadow: 0 0 10px rgba(255,117,151,0.3); }
+        .btn {
+            background: linear-gradient(45deg, #ff7597, #ff4e79);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255,117,151,0.4);
+            transition: 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,117,151,0.6); }
+        .error-msg { color: #ff7b72; font-size: 14px; margin-top: 10px; display: none; }
+
+        .content-screen { display: none; opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .show-content { display: block; opacity: 1; transform: translateY(0); }
+        
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(255,117,151,0.4);
+        }
+        h1 { font-size: 32px; background: linear-gradient(45deg, #ff7597, #ffced8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 10px 0; }
+        .emotional-text { font-size: 16px; line-height: 1.6; color: #c9d1d9; margin: 20px 0; font-style: italic; }
+        
+        .audio-box {
+            background: #1f2430;
+            padding: 15px;
+            border-radius: 16px;
+            margin-top: 25px;
+            border: 1px solid rgba(255,117,151,0.2);
+        }
+        .audio-box p { margin: 0 0 10px 0; font-size: 14px; color: var(--accent-color); font-weight: bold; }
+        audio { width: 100%; margin-top: 5px; }
+    </style>
 </head>
 <body>
 
-<div class="card">
-    <div class="heart">❤️</div>
-    <h1>Happy Birthday Dharmesh! ✨</h1>
-    <div class="bubu-text">To My One & Only Bubu, My Daddy 💖</div>
-    
-    <p>Sorry ki main pehle ghabrahat mein tumhara birthday thoda bhool gayi thi 🥺 par tum jaante ho na ki tum mere liye kya ho? Aaj mere bachhe ka, mere daddy ka birthday hai! 🎂🎉</p>
-    
-    <div class="story-box">
-        "Yaad hai na jab main GC mein kisi aur ladke se flirt karti thi, aur tum jealous hoke raat ko ghumne chale jaate the? Aur main ek number ki bhondu, jo ID ka password bhi nahi badalti thi... aur galti se tumne wahi password daala aur login ho gaye! 🤭 Vahan se humari kahani badli, aur main dheere-dheere sirf aur sirf aapki ho gayi."
-    </div>
-    
-    <p>Mera gussa jhelne se lekar, mere liye apni jaan khatre mein daal kar kitne ladko ko maarne tak... tumne har pal sabit kiya hai ki tum mere scche hero ho. Thank you so much for protecting me and loving me like no one else can. 🫂</p>
-    
-    <p>Hum dono ke beech ka ye distance bohot jaldi khatam hoga, ye mera waada hai tumse. Aur haan, **20 FEB** ko hum mil rahe hain, jiska mujhe sabse zyada intezar hai! 😍</p>
-    
-    <p class="romantic-note">I loveee you so much, Daddy! Iwofff you so much, Bubu! Infinity and beyond! ❤️✨</p>
-</div>
+    <div class="container" id="mainContainer">
+        <!-- LOCK SCREEN -->
+        <div class="lock-screen" id="lockScreen">
+            <div style="font-size: 50px; margin-bottom: 10px;">🔒</div>
+            <h2>Enter Security PIN</h2>
+            <p style="color: #8b949e; font-size: 14px;">Yeh surprise sirf Dharmesh ji ke liye locked hai! 😉</p>
+            <input type="password" class="pin-input" id="pinField" maxlength="4" placeholder="••••">
+            <br>
+            <button class="btn" onclick="checkPin()">Unlock Surprise 🎁</button>
+            <div class="error-msg" id="errorMsg">Galat PIN! Thoda dimaag lagao... 😜</div>
+        </div>
 
+        <!-- SURPRISE CONTENT SCREEN -->
+        <div class="content-screen" id="contentScreen">
+            <div style="font-size: 40px; margin-bottom: 10px;">🎉✨🎂</div>
+            
+            <!-- Photo name target: dharmesh.jpg -->
+            <img src="dharmesh.jpg" alt="Birthday Boy" class="profile-pic">
+            
+            <h1>Happy Birthday, Dharmesh! ❤️</h1>
+            
+            <p class="emotional-text">
+                "Aapki smile sabse best hai, aur aapka yeh birthday usse bhi zyada special hona chahiye. Mere life mein aapki jagah sabse upar hai, aur yeh chhota sa digital surprise bas ek shuruat hai..." ✨😭
+            </p>
+
+            <!-- Voice Note Section -->
+            <div class="audio-box">
+                <p>🎵 Suno... Mere dil ki baat (Voice Note) ❤️</p>
+                <!-- Audio name target: voice.mp3 -->
+                <audio controls>
+                    <source src="voice.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+            <p style="font-size: 12px; color: #8b949e; margin-top: 25px;">Made with love by Prachi 💖</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPin() {
+            const enteredPin = document.getElementById('pinField').value;
+            const correctPin = "2002"; // 20 Feb ke liye PIN 2002 hai
+            
+            if(enteredPin === correctPin) {
+                document.getElementById('lockScreen').style.display = 'none';
+                const content = document.getElementById('contentScreen');
+                content.classList.add('show-content');
+            } else {
+                const error = document.getElementById('errorMsg');
+                error.style.display = 'block';
+                document.getElementById('pinField').style.borderColor = '#ff7b72';
+                setTimeout(() => {
+                    document.getElementById('pinField').style.borderColor = '#30363d';
+                }, 1000);
+            }
+        }
+        document.getElementById('pinField').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') { checkPin(); }
+        });
+    </script>
 </body>
-                                    </html>
-                                    
+</html>
